@@ -1,0 +1,63 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa; /* Soft pastel teal */
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff; /* Soft white background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid #b2dfdb; /* Soft border */
+}
+
+.softboy-text {
+  font-size: 22px;
+  color: #607d8b; /* Soft blue-gray for a calm vibe */
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.softboy-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #b2dfdb; /* Soft teal border */
+  margin: 10px 0;
+  font-size: 16px;
+  color: #37474f;
+  width: 80%;
+  background-color: #e0f2f1; /* Light pastel background for input */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.softboy-input:focus {
+  border-color: #80cbc4; /* Slightly darker teal on focus */
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #80deea; /* Light teal for soft vibe */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  transform: scale(1.05);
+  background-color: #4dd0e1; /* Slightly darker teal on hover */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="softboy-text">Hey, may gusto akong sabihin sayo, gusto mo bang malaman?</p>
+        <input type="text" id="name" class="softboy-input" placeholder="Your name (para personal hehe)">
+        <br>
+        <button onclick="goToNextPage()">Yes</button>
+        <button onclick="location.href='no.html'">No</button>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            const name = document.getElementById('name').value;
+            if (name) {
+                location.href = `second_yes.html?name=${encodeURIComponent(name)}`;
+            } else {
+                alert('Please enter your name muna!!!!!!');
+            }
+        }
+    </script>
+</body>
+</html>

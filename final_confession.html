@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="stylesheet" href="confession_styles.css"> <!-- Link to the new CSS file -->
+</head>
+<body>
+    <div class="container">
+        <p id="confession1" class="typewriter"></p>
+        <p id="confession2" class="typewriter"></p>
+        <p id="confession3" class="typewriter"></p>
+        <p id="confession4" class="typewriter"></p>
+        <p id="confession5" class="typewriter"></p>
+        <p id="confession6" class="typewriter"></p> <!-- New line added -->
+    </div>
+
+    <script>
+        // Extract name from URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name') || "you"; // Default to "you" if no name
+
+        // Soft boy confession messages divided into lines
+        const lines = [
+            `Alam mo ${name}, may gusto lang sana akong i-share sa'yo.`,
+            `Every time na kasama kita, ang saya saya ko.`,
+            `I just want you to know, you’re really special to me.`,
+            `It feels like, you’re my happy place, eh.`,
+            `Sana malaman mo, hindi madaling sabihin ito para sa akin.`,
+            `Gusto ko sanang malaman mo na gustong gusto kita.`
+        ];
+
+        const confessionElements = [
+            document.getElementById('confession1'),
+            document.getElementById('confession2'),
+            document.getElementById('confession3'),
+            document.getElementById('confession4'),
+            document.getElementById('confession5'),
+            document.getElementById('confession6')
+        ];
+
+        let lineIndex = 0;
+
+        // Function to display each line with a fade-in effect
+        function showLine() {
+            if (lineIndex < lines.length) {
+                confessionElements[lineIndex].innerHTML = lines[lineIndex];
+                confessionElements[lineIndex].style.opacity = 1; // Make it visible
+                lineIndex++;
+                setTimeout(showLine, 4000); // Delay before showing the next line (4 seconds)
+            }
+        }
+
+        window.onload = showLine; // Start displaying lines on load
+    </script>
+</body>
+</html>

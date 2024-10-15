@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sure Ka Ba?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="softboy-text">Sure ka ba? Wala natong balikan ah? hehe</p>
+        <button id="yesButton">Yes</button>
+        <button onclick="location.href='no_second.html'">No</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+
+        document.getElementById('yesButton').onclick = function() {
+            location.href = `final_confession.html?name=${encodeURIComponent(name)}`;
+        }
+    </script>
+</body>
+</html>
